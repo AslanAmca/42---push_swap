@@ -6,7 +6,7 @@
 /*   By: aaslan <aaslan@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 02:44:55 by aaslan            #+#    #+#             */
-/*   Updated: 2023/03/11 23:32:34 by aaslan           ###   ########.fr       */
+/*   Updated: 2023/03/12 01:46:45 by aaslan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	check_duplicate_value(t_stack **stack)
 			if (current->value == temp->next->value)
 			{
 				free_stack(*stack);
-				print_error("There are duplicate values.");
+				print_error();
 			}
 			temp = temp->next;
 		}

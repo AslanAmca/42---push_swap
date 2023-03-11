@@ -6,16 +6,14 @@
 /*   By: aaslan <aaslan@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/07 17:25:31 by aaslan            #+#    #+#             */
-/*   Updated: 2023/03/11 10:47:31 by aaslan           ###   ########.fr       */
+/*   Updated: 2023/03/12 02:24:02 by aaslan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../checker_bonus.h"
 
-void	print_error(char *error_message)
+void	print_error(void)
 {
-	print_string("Error!\n");
-	print_string(error_message);
-	print_string("\n");
+	print_string("Error\n");
 	exit(EXIT_FAILURE);
 }

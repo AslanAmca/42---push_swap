@@ -6,7 +6,7 @@
 /*   By: aaslan <aaslan@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/06 01:54:22 by aaslan            #+#    #+#             */
-/*   Updated: 2023/03/12 00:11:38 by aaslan           ###   ########.fr       */
+/*   Updated: 2023/03/12 02:24:11 by aaslan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ char	**string_split(char *s, char c);
 long	string_to_integer(const char *nptr);
 int		string_equal(char *s1, char *s2);
 void	print_string(char *string);
-void	print_error(char *error_message);
+void	print_error(void);
 void	free_string_array(char **string_array);
 void	validate_int(char **argv);
 

@@ -6,7 +6,7 @@
 /*   By: aaslan <aaslan@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/11 13:56:22 by aaslan            #+#    #+#             */
-/*   Updated: 2023/03/11 13:57:47 by aaslan           ###   ########.fr       */
+/*   Updated: 2023/03/12 02:25:23 by aaslan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 static void	handle_int_error(char **numbers)
 {
 	free_string_array(numbers);
-	print_error("Some arguments aren’t integers.");
+	print_error();
 }
 
 static int	is_int_value(char *arg)

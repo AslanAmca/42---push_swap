@@ -6,7 +6,7 @@
 /*   By: aaslan <aaslan@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/11 23:25:37 by aaslan            #+#    #+#             */
-/*   Updated: 2023/03/12 00:05:17 by aaslan           ###   ########.fr       */
+/*   Updated: 2023/03/12 02:25:01 by aaslan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static void	handle_error(char *line, t_stack **a, t_stack **b)
 	free(line);
 	free_stack(*a);
 	free_stack(*b);
-	print_error("An instruction doesn’t exist.");
+	print_error();
 }
 
 static void	handle_line(char *line, t_stack **stack_a, t_stack **stack_b)
@@ -37,7 +37,7 @@ static void	handle_line(char *line, t_stack **stack_a, t_stack **stack_b)
 	else if (string_equal(line, "rra\n"))
 		reverse_rotate_a(stack_a);
 	else if (string_equal(line, "rrb\n"))
-		reverse_rotate_b(stack_a);
+		reverse_rotate_b(stack_b);
 	else if (string_equal(line, "rrr\n"))
 		reverse_rotate_ab(stack_a, stack_b);
 	else if (string_equal(line, "pa\n"))

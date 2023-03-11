@@ -25,7 +25,7 @@ static void	fill_stack_helper(char **numbers, t_stack **stack)
 		{
 			free_stack(*stack);
 			free_string_array(numbers);
-			print_error("Some arguments are not in an integer range.");
+			print_error();
 		}
 		else
 			append_to_stack(stack, create_stack(number));
