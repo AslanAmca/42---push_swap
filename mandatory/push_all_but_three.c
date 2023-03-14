@@ -30,7 +30,7 @@ void	push_all_but_three(t_stack **a, t_stack **b, int a_size)
 
 	push = 0;
 	push_limit = a_size / 2;
-	while (a_size >= 6 && push_limit <= a_size)
+	while (a_size >= 6 && push_limit <= a_size - 3)
 	{
 		while (push < push_limit)
 		{
