@@ -1,71 +1,65 @@
-# push_swap
+## push_swap
+This project will make you sort data on a stack, with a limited set of instructions, using the lowest possible number of actions. To succeed you’ll have to manipulate various types of algorithms and choose the one (of many) most appropriate solution for an optimized data sorting.
 
-push_swap is a 42 school algorithm project where we must sort a given list of random numbers with a limited set of instructions, using the lowest possible number of actions.
+For more detailed information, look at the [**subject of this project**](en.subject.pdf).
 
-## Status
-Grade: 125%
 
 ## Usage
 
-Git clone the repository and cd into it. Then use ```make``` to compile.
+### Requirements
 
-Then run it with :
+The function is written in C language and thus needs the **`gcc` compiler** and some standard **C libraries** to run.
 
-```shell
-./push_swap <numbers>
-```
+### Instructions
 
-The numbers provided can be positive or negative integers. There must not be any duplicates. For example :
+**1. Compiling the program**
 
-```shell
-./push_swap 9 0 -217 2147483647 -2147483648
-```
-
-If the arguments are valid, the program will output the most efficient list of actions to sort the list.
-
-The program can be checked with the provided checker, like this :
+To compile, go to the program path and run:
 
 ```shell
-ARG="3 0 9 2 -1"; ./push_swap $ARG | ./checker $ARG
+$ make
 ```
 
-## Tester
+**2. Executing the program**
 
-Here is the best tester link for this project --> https://github.com/LeoFu9487/push_swap_tester
+To execute the program, run:
 
-## Push_Swap Rules and Grading
+```C
+$ ./push_swap $ARG
+```
 
-The program is only allowed two stacks to work with, stack A and stack B. All the numbers are initially added to stack A, and B is empty.
+where `$ARG` is a space separated list of integers, e.g. `ARG="1 5 2 4 3"`
 
-The possible actions are:
 
-* ```pa``` (push A): Take the first element at the top of B and put it at the top of A. Do nothing if B is empty.
-* ```pb``` (push B): Take the first element at the top of A and put it at the top of B. Do nothing if A is empty.
-* ```sa``` (swap A): Swap the first 2 elements at the top of stack A. Do nothing if there is only one or no elements.
-* ```sb``` (swap B): Swap the first 2 elements at the top of stack B. Do nothing if there is only one or no elements.
-* ```ss```: ```sa``` and ```sb``` at the same time.
-* ```ra``` (rotate A): Shift all elements of stack A up by 1. The first element becomes the last one.
-* ```rb``` (rotate B): Shift all elements of stack B up by 1. The first element becomes the last one.
-* ```rr```: ```ra``` and ```rb``` at the same time.
-* ```rra``` (reverse rotate A): Shift all elements of stack A down by 1. The last element becomes the first one.
-* ```rrb``` (reverse rotate B): Shift all elements of stack b down by 1. The last element becomes the first one.
-* ```rrr``` : ```rra``` and ```rrb``` at the same time.
+### Actions
 
-The grade depends on how efficient the program's sorting process is.
+**PUSH**
 
-* Sorting 3 values: no more than 3 actions.
-* Sorting 5 values: no more than 12 actions.
-* Sorting 100 values: rating from 1 to 5 points depending on the number of actions:
-  * 5 points for less than 700 actions
-  * 4 points for less than 900
-  * 3 points for less than 1100
-  * 2 points for less than 1300
-  * 1 point for less than 1500
-* Sorting 500 values: rating from 1 to 5 points depending on the number of actions:
-  * 5 points for less than 5500 actions
-  * 4 points for less than 7000
-  * 3 points for less than 8500
-  * 2 points for less than 10000
-  * 1 point for less than 11500
+Take the first element at the top of one stack and put it at the top of the other; do nothing if the origin stack is empty.
 
-Validating the project requires at least 80/100.
+* **`pa`** - top element of _stack b_ goes to top of _stack a_.
+* **`pb`** - top element of _stack a_ goes to top of _stack b_.
+
+**SWAP**
+
+Swap the first 2 elements at the top of the stack; do nothing if there is only one or no elements.
+
+* **`sa`** - swap  _stack a_.
+* **`sb`** - swap  _stack b_.
+* **`ss`** - `sa` and `sb` at the same time.
+
+**ROTATE**
+
+Shift up all elements of the stack by one; the first element becomes the last.
+
+* **`ra`** - rotate stack a.
+* **`rb`** - rotate stack b.
+* **`rr`** - `ra` and `rb` at the same time.
+
+**REVERSE ROTATE**
+
+Shift down all elements of the stack by one; the last element becomes the first.
+
+* **`rra`** - reverse rotate stack a.
+* **`rrb`** - reverse rotate stack b.
+* **`rrr`** - `rra` and `rrb` at the same time.
